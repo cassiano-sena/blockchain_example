@@ -257,5 +257,9 @@ if __name__ == "__main__":
             balance = get_balance(node_id, blockchain)
             print(f"[i] The balance of {node_id} is {balance}.")
 
+        elif choice == "5":
+            print("Exiting...")
+            break
+
         else:
             print("[!] Invalid choice.")
