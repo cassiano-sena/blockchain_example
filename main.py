@@ -174,13 +174,13 @@ def broadcast_transaction(tx: Dict, peers_fpath: str, port: int):
             )
 
 
-def get_balance(address: str, blockchain: List[Block]) -> float:
+def get_balance(node_id: str, blockchain: List[Block]) -> float:
     balance = 0
     for block in blockchain:
         for tx in block.transactions:
-            if tx["to"] == address:
+            if tx["to"] == node_id:
                 balance += float(tx["amount"])
-            if tx["from"] == address:
+            if tx["from"] == node_id:
                 balance -= float(tx["amount"])
     return balance
 
@@ -253,9 +253,9 @@ if __name__ == "__main__":
             print_chain(blockchain)
 
         elif choice == "4":
-            address = input("Address: ")
-            balance = get_balance(address, blockchain)
-            print(f"[i] The balance of {address} is {balance}.")
+            node_id = input("Node ID: ")
+            balance = get_balance(node_id, blockchain)
+            print(f"[i] The balance of {node_id} is {balance}.")
 
         else:
             print("[!] Invalid choice.")
