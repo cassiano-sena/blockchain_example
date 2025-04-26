@@ -1,13 +1,17 @@
 from typing import Dict, List
-import main
+
+from chain import load_chain, make_transaction, mine_block
+from network import start_server
+from utils import load_config
+
 
 
 if __name__ == "__main__":
-    config = main.load_config()
-    blockchain = main.load_chain(config["blockchain_file"])
+    config = load_config()
+    blockchain = load_chain(config["blockchain_file"])
     transactions: List[Dict] = []
 
-    main.start_server(
+    start_server(
         config["host"],
         config["port"],
         blockchain,
@@ -18,7 +22,7 @@ if __name__ == "__main__":
 
     # create a transaction
     print("[TEST] Make transaction")
-    main.make_transaction(
+    make_transaction(
         "george_linux",
         "george_windows",
         10,
@@ -28,7 +32,7 @@ if __name__ == "__main__":
     )
 
     print("[TEST] Mine block")
-    main.mine_block(
+    mine_block(
         transactions,
         blockchain,
         config["node_id"],
