@@ -152,7 +152,7 @@ def mine_block(
     transactions.clear()
     save_chain(blockchain_fpath, blockchain)
     broadcast_block(new_block, peers_fpath, port)
-    print(f"[✓] Block {new_block['index']} mined and broadcasted.")
+    print(f"[✓] Block {new_block.index} mined and broadcasted.")
 
 
 def print_chain(blockchain: List[Block]):
