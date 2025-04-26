@@ -1,6 +1,7 @@
 from pprint import pp
 import hashlib, json, socket, threading, time, os
 from datetime import datetime
+import traceback
 from typing import Dict, List
 
 from block import (
@@ -97,8 +98,8 @@ def handle_client(
             if tx not in transactions:
                 transactions.append(tx)
                 print(f"[+] Transaction received from {addr}")
-    except:
-        pass
+    except Exception as e:
+        print(f"Exception when hadling client. Exception: {e}. {traceback.format_exc()}")
     conn.close()
 
 
