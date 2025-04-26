@@ -22,7 +22,13 @@ def load_chain(fpath: str) -> List[Block]:
     """
     if os.path.exists(fpath):
         with open(fpath) as f:
-            return json.load(f)
+            data = json.load(f)
+            blockchain = []
+            for block_data in data:
+                block = create_block_from_dict(block_data)
+                blockchain.append(block)
+            return blockchain
+
     return [create_genesis_block()]
 
 
@@ -136,10 +142,6 @@ def mine_block(
     peers_fpath: str,
     port: int,
 ):
-    if not transactions:
-        print("[!] No transactions to mine.")
-        return
-
     new_block = create_block(
         transactions,
         blockchain[-1].hash,
