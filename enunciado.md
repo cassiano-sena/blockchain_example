@@ -1,22 +1,42 @@
 # Enunciado do trabalho
 
-Execute o seguinte teste e faça o que é pedido.
+Os objetivos deste trabalho são:
+
+1. Implementar um sistema baseado em **comunicação** e **arquitetura peer-to-peer (P2P)**;
+2. Compreender as principais funcionalidades de uma **blockchain**;
+3. Analisar e resolver problemas de consistência de dados em redes **descentralizadas**;
+4. Representar a arquitetura do sistema e do software desenvolvido;
+5. Documentar e apresentar a solução de forma clara e estruturada.
+
+## Requisitos Iniciais
+1. Crie uma conta no ZeroTier.
+2. Conecte dois computadores à mesma rede virtual privada.
+3. Configure o ambiente para que ambos compartilhem a mesma aplicação de blockchain desenvolvida (isto é, execute o mesmo código nas duas máquinas).
 
 ## Cenário de teste
 
-Dado 2 computadores participando da rede.
+Com dois computadores conectados à rede, execute os seguintes passos:
 
-Primeiro passo. Realize as seguintes operações em sequência
-1. Computador 1: minera 2 blocos em sequência
-2. Computador 1: transfere 10 moedas para Computador 2
+### Primeiro passo
 
-Segundo passo. Agora, realize as seguintes operações em paralelo (deve ser solicitado ao mesmo tempo, ou quase ao mesmo tempo, para ambos computadores)
-1. Computador 1: minera 1 bloco
-2. Computador 2: minera 1 bloco
+Realize as seguintes operações em sequência
 
-Terceiro passo. Verifique os estados da blockchain em cada computador.
-1. Computador 1: verifica estado da blockchain
-2. Computador 2: verifica estado da blockchain
+1. **Computador 1**: minera 2 blocos em sequência
+2. **Computador 1**: transfere 10 moedas para Computador 2
+
+### Segundo passo
+
+Realize as seguintes operações em paralelo (deve ser solicitado ao mesmo tempo, ou quase ao mesmo tempo, para ambos computadores)
+
+1. **Computador 1**: minera 1 bloco
+2. **Computador 2**: minera 1 bloco
+
+### Terceiro passo
+
+Verifique os estados da blockchain em cada computador.
+
+1. **Computador 1**: verifique o estado da blockchain usando a função pronta apresentada
+2. **Computador 2**: verifique o estado da blockchain usando a função pronta apresentada
 
 ## Verificação dos resultados:
 
@@ -39,7 +59,7 @@ Index: 3, Hash: 0000f190c7..., Tx: 2
 
 ## Análise
 
-Esses resultados nos mostram que houve uma inconsistência na blockchain pois os indexes deveriam ser sequênciais e únicos.
+Esses resultados nos mostram que houve uma inconsistência na blockchain pois os índeces deveriam ser sequênciais e únicos.
 
 ## Tarefa
 
@@ -58,9 +78,9 @@ Ao final, torne público o seu código no github e grave uma apresentação expl
 
 ## Critério de avaliação
 
-1. Justificativa para causa do erro;
-2. Método selecionado para correção do erro;
-3. Corretude da solução;
+1. Clareza na justificativa para causa do erro;
+2. Relevância do método selecionado para correção do erro;
+3. Efetividade da solução implementada;
 4. Apresentação da arquitetura da solução; e
 5. Qualidade do relatório, código e apresentação.
 
@@ -70,8 +90,7 @@ Ao final, torne público o seu código no github e grave uma apresentação expl
 Para aqueles que estiverem interessados em ganhar ponto extra, segue algumas outras sugestões de melhorias:
 
 1. Possibilitar que 1 novo par descubra todos os pares atuais participantes da rede a partir de um único par (easy)
-2. Verificar se alguém tentando fazer uma transação possui saldo para tal (hard)
-3. Garantir que alguém tentando fazer uma transação não esteja utilizando uma moeda já gasta (medium)
-4. Possibilitar múltiplas conexões de clientes paralelas na thread do servidor (easy)
+2. Possibilitar múltiplas conexões de clientes paralelas na thread do servidor (easy)
+3. Garantir que alguém tentando fazer uma transação não esteja utilizando uma moeda já gasta (hard)
 
 Caso você descubra outras vulnerabilidades e pontos de melhoria, apresente-ás. Você ganhará ponto extra por isso. 
