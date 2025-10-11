@@ -63,7 +63,7 @@ Esses resultados nos mostram que houve uma inconsistência na blockchain pois os
 
 ## Tarefa
 
-Identifique a causa do erro e como é chamado esse tipo de problema. Em seguida, pesquise por soluções adotadas para este tipo de problema em moedas digitais e selecione um método e faça uma implementação para corrigir esse problema.
+Identifique a causa do erro e como é chamado esse tipo de problema. Em seguida, pesquise por soluções adotadas para este tipo de problema em moedas digitais, selecione um método e faça uma implementação para corrigir esse problema.
 
 Monte um relatório contendo:
 
@@ -74,7 +74,7 @@ Monte um relatório contendo:
 5. Apresente os novos resultados;
 6. Apresente a arquitetura de sistema e a arquitetura de software usando diagramas.
 
-Ao final, torne público o seu código no github e grave uma apresentação explicando as alterações realizadas. Adicione no relatório os links para o código e para a apresentação. Submeta o relatório em formato PDF.
+Ao final, torne público o seu código no github (opcionalmente, grave uma apresentação explicando as alterações realizadas). Adicione no relatório os links para o código e para a apresentação. Submeta o relatório em formato PDF.
 
 ## Critério de avaliação
 
