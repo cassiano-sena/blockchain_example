@@ -6,17 +6,44 @@ from block import Block, create_block, create_block_from_dict, create_genesis_bl
 from network import broadcast_block, broadcast_transaction
 
 
+# def load_chain(fpath: str) -> List[Block]:
+#     if os.path.exists(fpath):
+#         with open(fpath) as f:
+#             data = json.load(f)
+#             blockchain = []
+#             for block_data in data:
+#                 block = create_block_from_dict(block_data)
+#                 blockchain.append(block)
+#             return blockchain
+
+#     return [create_genesis_block()]
+
+
+# versao com tratamento de erro
 def load_chain(fpath: str) -> List[Block]:
-    if os.path.exists(fpath):
-        with open(fpath) as f:
+    # Se o arquivo não existir, cria blockchain com bloco gênesis
+    if not os.path.exists(fpath):
+        print("[INIT] Nenhuma blockchain encontrada. Criando nova com bloco gênesis...")
+        return [create_genesis_block()]
+
+    # Se o arquivo existe mas está vazio, evita JSONDecodeError
+    if os.path.getsize(fpath) == 0:
+        print("[WARN] Arquivo de blockchain vazio. Criando nova blockchain...")
+        return [create_genesis_block()]
+
+    # Tenta carregar o conteúdo JSON normalmente
+    try:
+        with open(fpath, "r") as f:
             data = json.load(f)
             blockchain = []
             for block_data in data:
                 block = create_block_from_dict(block_data)
                 blockchain.append(block)
             return blockchain
+    except json.JSONDecodeError:
+        print("[ERROR] Arquivo blockchain.json corrompido. Recriando blockchain...")
+        return [create_genesis_block()]
 
-    return [create_genesis_block()]
 
 
 def save_chain(fpath: str, chain: list[Block]):
