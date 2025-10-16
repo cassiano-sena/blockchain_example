@@ -3,7 +3,7 @@ from pprint import pp
 from typing import Dict
 
 
-def load_config(fpath: str = "configs/node_config.json") -> Dict:
+def load_config(fpath: str = "node_config.json") -> Dict:
     print("Loading config...")
     with open(fpath, "r") as f:
         data = json.load(f)

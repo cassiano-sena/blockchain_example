@@ -23,8 +23,8 @@ if __name__ == "__main__":
     # create a transaction
     print("[TEST] Make transaction")
     make_transaction(
-        "george_linux",
-        "george_windows",
+        "cassiano_m2",
+        "cassiano_m1",
         10,
         transactions,
         config["peers_file"],
