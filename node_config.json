@@ -1,6 +1,6 @@
 {
-    "node_id": "cassiano_m2",
-    "host": "172.29.20.2",
+    "node_id": "cassiano_m1",
+    "host": "192.168.193.103",
     "port": 5002,
     "difficulty": 4,
     "reward": 10,

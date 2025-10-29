@@ -1,7 +1,7 @@
 [
   {
     "index": 0,
-    "timestamp": "2025-10-16 23:18:19.087250",
+    "timestamp": "2025-10-17 00:38:26.374445",
     "transactions": [],
     "prev_hash": "0",
     "nonce": 0,
@@ -9,21 +9,69 @@
   },
   {
     "index": 1,
-    "timestamp": "2025-10-16 23:18:32.026495",
+    "timestamp": "2025-10-17 00:38:35.421974",
     "transactions": [
       {
         "from": "network",
-        "to": "cassiano_m2",
+        "to": "eduardo_weber_desktop",
         "amount": 10
-      },
+      }
+    ],
+    "prev_hash": "0",
+    "nonce": 3219,
+    "hash": "0000a262ad6966fadc5f9254f7dc58f6ac0e625aa85d361d83a1c3fc965ec753"
+  },
+  {
+    "index": 1,
+    "timestamp": "2025-10-17 00:38:42.434991",
+    "transactions": [
       {
-        "from": "cassiano_m2",
+        "from": "network",
         "to": "cassiano_m1",
         "amount": 10
       }
     ],
     "prev_hash": "0",
-    "nonce": 29218,
-    "hash": "00001cacc436f41c16a306c29d640edc1d8e58741f9c81c06367b81c8bbcc2c5"
+    "nonce": 17338,
+    "hash": "0000187dd4b516b532935b8e398070e1761234fceef65bdfc7d25a41fbdf8d1b"
+  },
+  {
+    "index": 3,
+    "timestamp": "2025-10-17 00:49:45.792550",
+    "transactions": [
+      {
+        "from": "network",
+        "to": "cassiano_m1",
+        "amount": 10
+      },
+      {
+        "from": "192.168.193.103",
+        "to": "192.168.193.161",
+        "amount": "10"
+      },
+      {
+        "from": "eduardo_weber_desktop",
+        "to": "cassiano_m1",
+        "amount": "10"
+      },
+      {
+        "from": "cassiano_m1",
+        "to": "eduardo_weber_desktop",
+        "amount": "5"
+      },
+      {
+        "from": "eduardo_weber_desktop",
+        "to": "cassiano_m1",
+        "amount": "5"
+      },
+      {
+        "from": "eduardo_weber_desktop",
+        "to": "cassiano_m1",
+        "amount": "2"
+      }
+    ],
+    "prev_hash": "0000187dd4b516b532935b8e398070e1761234fceef65bdfc7d25a41fbdf8d1b",
+    "nonce": 33363,
+    "hash": "0000e6801ab1c2e04790eaccf4065a8bd472cd7acc7a0cb6692398218ec7ffce"
   }
 ]

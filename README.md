@@ -1,2 +1,3 @@
 # Exemplo simples de blockchain
-Projeto voltado para desenvolvimento de uma blockchain simples com objetivo educacional.
+Fork: https://github.com/georgenardes/blockchain_example.
+Trabalho M2 de Sistemas Distribuídos.
